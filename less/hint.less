@@ -14,7 +14,7 @@
   }
 
   &__btn .icon {
-    .icon-question;
+    .icon-search;
   }
 
   &__btn.is-open .icon {
@@ -24,12 +24,14 @@
   // slide out pop up
   // --------------------------------------------------
   &__widget {
-    position: absolute;
+     position: relative;
     top: 0;
     right: 0;
-    width: 20rem;
-    z-index: 15;
-    opacity: 0;
+    width: 100%;
+    margin-bottom:40px;
+    //z-index: 50;
+    //opacity: 0;
+    display:none;
 
     .dir-rtl & {
       right: inherit;
@@ -38,7 +40,7 @@
   }
 
   &__widget.is-open {
-    opacity: 1;
+     display:block;
   }
 }
 
@@ -80,8 +82,8 @@
   // slide out pop up
   // --------------------------------------------------
   &__widget {
-    top: (@icon-size + @icon-padding) / 2;
-    right: (@icon-size + @icon-padding) / 2;
+   //top: (@icon-size + @icon-padding) / 2;
+    //right: (@icon-size + @icon-padding) / 2;
     padding: @item-padding;
     background-color: @white;
     border: .125rem solid @item-color;

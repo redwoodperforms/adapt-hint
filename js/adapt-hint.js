@@ -42,7 +42,7 @@ define([
       const data = this.model.toJSON();
       const template = Handlebars.templates.hint;
 
-      this.$el.html(template(data)).appendTo($('.' + this.model.get('_id')));
+      this.$el.html(template(data)).prependTo($('.' + this.model.get('_id')));
 
       _.defer(this.postRender.bind(this));
     },
